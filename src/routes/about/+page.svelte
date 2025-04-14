@@ -17,7 +17,11 @@
     </p>
 
     <p>
-        Some projects I am currently working on include:
+        Some projects that I've worked on include:
+
+        - Frontend test automation with Java, Selenium and Page Factory:
+
+        https://github.com/mimmato/SK17-Automation-Final
 
         
     </p>
