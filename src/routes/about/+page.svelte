@@ -19,13 +19,15 @@
     <p>Some projects that I've worked on include:</p>
     <ul>
       <li>
-        Frontend test automation with Java, Selenium, and Page Factory:
+        1. Frontend test automation with Java, Selenium, and Page Factory 
         <a href="https://github.com/mimmato/SK17-Automation-Final" target="_blank">
-          SK17-Automation-Final
+
+          Skillo training (Test Autommation)
+
         </a>
       </li>
     </ul>
-    
+
   </div>
 </div>
 
