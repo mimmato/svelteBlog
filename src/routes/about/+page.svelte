@@ -16,15 +16,16 @@
       I'm currently on the path to becoming a <strong>Quality Assurance Engineer</strong>, diving deep into test automation, Java, Selenium, Playwright, APIs and more.
     </p>
 
-    <p>
-        Some projects that I've worked on include:
-
-        - Frontend test automation with Java, Selenium and Page Factory:
-
-        https://github.com/mimmato/SK17-Automation-Final
-
-        
-    </p>
+    <p>Some projects that I've worked on include:</p>
+    <ul>
+      <li>
+        Frontend test automation with Java, Selenium, and Page Factory:
+        <a href="https://github.com/mimmato/SK17-Automation-Final" target="_blank">
+          SK17-Automation-Final
+        </a>
+      </li>
+    </ul>
+    
   </div>
 </div>
 
