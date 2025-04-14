@@ -22,7 +22,7 @@
         1. Frontend test automation with Java, Selenium, and Page Factory 
         <a href="https://github.com/mimmato/SK17-Automation-Final" target="_blank">
 
-          Skillo training (Test Autommation)
+         <br> Skillo training (Test Autommation)
 
         </a>
       </li>
