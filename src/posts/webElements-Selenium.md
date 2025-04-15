@@ -9,6 +9,17 @@ categories:
 published: true
 ---
 
+## Table of contents:
+
+- [Introduction](#introduction)
+- [List of Web Elements:](#list-of-web-elements:)
+    - [1. WebElement and WebElements](#webElement-and-webElements)
+    - [2. Checkboxes](#checkboxes)
+    - [3. Radio Buttons](#radio-buttons)
+    - [4. Select (dropdown)](#Select-(dropdown))
+
+
+
 ## Web Elements in Selenium
 
 ### Introduction
