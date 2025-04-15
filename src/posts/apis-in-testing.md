@@ -29,12 +29,14 @@ published: true
 ### APIs
 
 ## Short History of APIs
-Application Programming Interface (API) is a technology used to facilitate communication or translate language between two distinct applications. APIs are widely used across various industries, with applications that vary based on accessibility, functionality, purpose, design/architecture, and more. APIs can also be categorized into two main groups based on their usage within an organization: Private and Public.
+Application Programming Interface (API) is a technology used to facilitate communication or translate language between two distinct applications. APIs are widely used 
+across various industries, with applications that vary based on accessibility, functionality, purpose, design/architecture, and more. APIs can also be categorized into two main groups based on their usage within an organization: Private and Public.
+
+<br>
 
 A good example which demonstrates what an API is in a simple way that doesn’t relate to the IT world would be:
 
 >In a restaurant, you (the API consumer) choose a dish from the menu (the API documentation) and give your order, with any special requests, to the waiter (the API). The waiter communicates your order to the kitchen (the API server), where the chef (the server’s business logic) prepares the dish. Once ready, the waiter brings it back to your table.
-
 The waiter acts as the "middleman," just like an API, transferring your request to the server and delivering the response back to you, all without you needing to interact with the kitchen directly.
 
 ## REST
@@ -102,9 +104,6 @@ Definition: Security protocols that protect the API.
 Types: Common methods include API keys, OAuth, JWT (JSON Web Tokens), and Basic Authentication to ensure only authorized users can access or modify resources.
 ## 8. Documentation
 REST APIs are typically accompanied by documentation, detailing available resources, endpoints, parameters, expected responses, and error codes to guide developers.
-
-
-
 
 ## Information API Creators Should Provide
 

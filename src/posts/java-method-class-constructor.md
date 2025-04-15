@@ -9,11 +9,32 @@ categories:
 published: true
 ---
 
+## Table of Contents
+
+- [Java Class and java file](#java-class-and-java-file)
+  - [Directory Structure Example](#Directory-Structure-Example)
+    - [Class declaration, signature & syntax](#Class-declaration,-signature-&-syntax)
+    - [Java method](#java-method)
+    - [Main Method declaration, signature & syntax](#Main-Method-declaration,-signature-&-syntax)
+    - [Method name](#method-name)
+  - [Java Class](#java-class)
+    - [Defining a Class](#defining-a-class)
+    - [Instantiating a Class](#instantiating-a-class)
+    - [Fields and Methods](#fields-and-methods)
+  - [Java Constructor](#java-constructor)
+    - [Default Constructor](#default-constructor)
+    - [Parameterized Constructor](#parameterized-constructor)
+    - [Constructor Overloading](#constructor-overloading)
+- [Summary](#summary)    
+
+
 ## Java Class and java file
 
 A class in Java is the fundamental building block of an application. Each class typically resides in its own .java file, while the file name should match the class name.
 
 Classes are organized into packages, which provide a way to group related classes together. Java's package structure mirrors the file system, making it easier to manage large applications.
+
+<br>
 
 Below is a representation of how classes are structured in a typical Java project:
 
@@ -34,36 +55,53 @@ src/
     ├── Class2.java
     └── Class3.java
 ```
+
+<br>
+
 Definitions:
 
-<strong>src/</strong>: The root directory that holds all packages.
-<strong>Packages</strong>: Each package (e.g., package1, package2, etc.) holds related classes.
-<strong>Class Files</strong>: Each class file (e.g., Car1.java, Dog1.java, etc.) contains a class definition.
+```
+src/: The root directory that holds all packages.
+Packages: Each package (e.g., package1, package2, etc.) holds related classes.
+Class Files: Each class file (e.g., Car1.java, Dog1.java, etc.) contains a class definition.
+```
 
 
 #### Class declaration, signature & syntax:
 
 Using `Car1.java` as an example, you will find that the class is defined as so in the beginning of the Car1.java file:
 
+<br>
+
 ```
 public class Car1 {
     // This is an example of a class in Java
 }
 ```
+<br>
 
 **Definitions:**
 
+<br>
 
-- **`public`**: The access modifier. It makes this class accessible from anywhere.
-- **`class`**: The keyword used to declare a class in Java.
-- **`Car1`**: The name of the class. It must match the file name (Car1.java).
-- **`{ }`**: The braces enclose the body of the class, where fields, methods, constructors, and other members are defined.
+```
+public: The access modifier. It makes this class accessible from anywhere. 
+class: The keyword used to declare a class in Java.
+Car1: The name of the class. It must match the file name (Car1.java).
+{ }: The braces enclose the body of the class, where fields, methods, constructors, and other members are defined.
+```
+
+<br>
 
 Classes can only use one of two modifiers:
 
-- **`public`**: The class is accessible by any other class
-- **`default`**: The class is only accessible by classes in the same package. This is used when you **don't** specify a modifier. 
+<br>
 
+```
+public: The class is accessible by any other class 
+default: The class is only accessible by classes in the same package. This is used when you don't specify a modifier. 
+```
+<br>
 
 
 ## Java Method
@@ -74,13 +112,17 @@ The following image illustrates the anatomy of a Java Class and the contained Ja
 
 <!-- ![Image](assets/img/classAnatomy.jpg) -->
 
+<br>
+
 image source: 
 *Kathy Sierra and Bert Bates. 2005. Head First Java, 2nd Edition. O'Reilly & Associates, Inc., USA.*
 
 
-#### Main Method declaration, signature & syntax:
+#### Main Method declaration, signature & syntax
 
 An example of a method is the main method. It is a special type of method used as a starting point for any Java program or class. Continuing with the `Car1.java` file example, you will find that within the class defined as Car1, we now have our `Main` method initialized, followed by a statement:
+
+<br>
 
 ```
 public class Car1 {
@@ -90,23 +132,40 @@ public class Car1 {
 }
 ```
 
+<br>
+
 **Definitions:**
 
-- **`public`**: This is an **access modifier**, indicating that the method can be accessed from outside the class (i.e., it is publicly accessible).
+<br>
 
-- **`static`**: This keyword means that the method belongs to the class itself rather than instances of the class. It can be called without creating an object of the class.
+```
+public: This is an access modifier, indicating that the method can be accessed from outside the class 
+(i.e., it is publicly accessible).
 
-- **`void`**: This is the **return type** of the method. `void` means the method doesn't return any value. 
+static: This keyword means that the method belongs to the class itself rather than instances of the class. 
+It can be called without creating an object of the class.
 
-- **`main`**: This is the **name** of the method. In this case, it's the entry point of a Java application, meaning this method is executed first when the program runs.
+void: This is the return type** of the method. `void` means the method doesn't return any value. 
 
-- **`(String[] args)`**: These are the **parameters** of the method. Here, `String[]` defines an array of `String` objects that can be passed to the method. `args` is the name of this array, and it allows command-line arguments to be passed to the program.
+main: This is the name of the method. In this case, it's the entry point of a Java application, 
+meaning this method is executed first when the program runs.
 
-**NOTE** The signature of the Main method is not a subject to change. For example, the main method of a Java program can only return `void`. To specify a different return type, you have to add it as a separte method called within the `main` method.
+(String[] args): These are the parameters of the method:
+`String[]` defines an array of `String` objects that can be passed to the method. 
+`args` is the name of this array, and it allows command-line arguments to be passed to the program.
+```
+
+<br>
+
+**NOTE:** The signature of the Main method is not a subject to change. For example, the main method of a Java program can only return `void`. To specify a different return type, you have to add it as a separte method called within the `main` method.
 
 The following is meant to illustrate other parts of a Method signature and the elements that can be included:
 
+<br>
+
 **`Access modifier`**: controls the level of access of the set method. It can be specified as `public`, `private` and `protected`:
+
+<br>
 
 ```
     public static void regularMethod ( String[] args) {}
@@ -114,13 +173,22 @@ The following is meant to illustrate other parts of a Method signature and the e
     protected static void regularMethod ( String[] args) {}
 ```
 
+
+<br>
+
 **`Return type`** : Other than `void`, the return type can be specified as of a specific <u>primitive</u> data type (int, char, short etc.) or <u>non-primitive</u>  (String, ArrayList, HashMap etc.).
+
+<br>
+
 The following example illustrates how a new method named `carSpeed();` is initialized within the main method. `carSpeed();` can now have its return type specified as `String`:
+
+<br>
 
 ```
 public class Car1 {
 public static void main(String[] args) {
-        System.out.println("This is the main method of the Car1 class. The return type if always void");
+        System.out.println("This is the main method of the Car1 class. 
+        + The return type if always void");
         String message = carSpeed();
         System.out.println(message);
     }
@@ -131,17 +199,32 @@ public static String carSpeed() {
 }
 ```
 
-**`return` keyword**: following the declaration of a return type different from `void`,  the `return` keyword is used within the body of a new method to return its value or result. You can refer to the previous example. 
+<br>
 
-**`Method name`** : written in camel case when using multiple words, method names are specified after the return type and before the parameters list:
+**Definitions:**
+
+<br>
+
+```
+return keyword: following the declaration of a return type different from `void`,  
+the `return` keyword is used within the body of a new method to return its value or result. 
+```
+
+<br>
+
+#### Method name
+Written in camel case when using multiple words, method names are specified after the return type and before the parameters list:
 
 ```
     public static void main ( String[] args) {}
     private static void methodName1 ( String[] args) {}
     protected static void methodName2 ( String[] args) {}
 ```
+<br>
 
 **`Parameter list`** : a list of input parameters, placed within the brackets `()` of the method signature:
+
+<br>
 
 ```
     public static void main(/*Parameters list i.e */
@@ -153,7 +236,13 @@ public static String carSpeed() {
     }
 ```
 
-**`Exception throw`** : methods can throw exceptions to indicate that an error or unexpected condition has occurred. This is done using the `throws` keyword in the method signature followed by the Exception name:
+<br>
+
+#### Exception throw
+
+Methods can throw exceptions to indicate that an error or unexpected condition has occurred. This is done using the `throws` keyword in the method signature followed by the Exception name:
+
+<br>
 
 ```
 public class Car1 {
@@ -168,11 +257,20 @@ public class Car1 {
     }
 }
 ```
+<br>
+
 Java uses built-in Exceptions and user-defined Exceptions. The above example illustrates the usage of a built-in Exception named **Exception** within the main method.
 
-**`throw` keyword** : the keyword is needed within the body method and when an exception is specified within its signature in order for the instructions to be completed. 
+<br>
 
-**`Method body`** : enclosed in curly braces `{}`. This is where all statements of the set method goes:
+```
+throw keyword: the keyword is needed within the body method and when an exception is specified within its signature in order for the instructions to be completed. 
+```
+<br>
+
+**Method body** : enclosed in curly braces `{}`. This is where all statements of the set method goes:
+
+<br>
 
 ```
 public class Car1 {
@@ -184,8 +282,13 @@ public class Car1 {
 ```
 #### Method overloading 
 Method overloading is used when you want to bring more functionality out of the same method. It is important to note that to overload a method, you must:
+
+<br>
+
 - preserve the method name throughout your declarations
 - ensure that the method parameters differ each time the method is declared
+
+<br>
 
 Let's take the `carSpeed();` method we declared previously as an example and overload it:
 
@@ -205,8 +308,10 @@ public static void main(String[] args) {
 
     }
 public static String carSpeed() {
-        System.out.println("First declaration of carSpeed(); without arguments in the parameters list.");
-        return "This will not return anything as there are no method parameters specified."; 
+        System.out.println("First declaration of carSpeed(); 
+        + without arguments in the parameters list.");
+        return "This will not return anything as there are 
+        + no method parameters specified."; 
     }
 
 public static String carSpeed(int speed) {
@@ -215,13 +320,17 @@ public static String carSpeed(int speed) {
     }
 
 public static String carSpeed(int speed, String model) {
-        System.out.println("Third declaration of carSpeed(); with parameters 'int speed' and 'String model'.");
+        System.out.println("Third declaration of carSpeed(); 
+        + with parameters 'int speed' and 'String model'.");
         return "This returns speed - " + speed + " km/h and model - " + model;
     }    
 }
 ```
 
+<br>
 example output:
+
+<br>
 
 ```
 First declaration of carSpeed(); without arguments in the parameters list.
@@ -234,11 +343,15 @@ Third declaration of carSpeed(); with parameters 'int speed' and 'String model'.
 This returns speed - 120 km/h and model - Toyota
 ```
 
+<br>
+
 In the above example, we duplicated the same method named `carSpeed();` 3 times, but passed different parameters in the parentheses to expand the method's functionality. We also added arguments or values, so we can visualize and make sense of the methods' parameters when printing.
 
 ## Java object
 
 So far, we have created **classes** and **methods**. We discussed their structure and some of their characteristics. In other words, we have set up a blueprint (classes) to create an object and we have also added some action (methods) for our object, but we are yet to create the actual object:
+
+<br>
 
 ```
 public class Car1 {
@@ -256,16 +369,30 @@ public class Car1 {
     }
 }
 ```
+<br>
+
 example output:
+
+<br>
 
 ```
 Car model: Toyota
 ```
 
-Expanding on our previous example, we have now initialized our first object named `myCar`. We use the keyword **new** to create it and point it to our class **Car1**.
-Next, we define a new variable within our Car1 class named `model` and assign it to our new object (myCar) just so we have something to print out in the example other than null. The actual value in this case is `"Toyota"`.
+<br>
+
+Expanding on our previous example, we have now initialized our first object named **myCar**. 
+We use the keyword **new** to create it and point it to our class **Car1**.
+
+<br>
+
+Next, we define a new variable within our Car1 class named **model** and assign it to our new object (myCar) just so we have something to print out in the example other than null. The actual value in this case is **"Toyota"**.
+
+<br>
 
 The following analogy might help to better understand the relationship between the 3 components:
+
+<br>
 
 ```
 Class: Car1
@@ -279,15 +406,23 @@ Method: main(String[] args)
   ↳ Action the object can perform (creates the myCar object, sets the model to "Toyota") 
   ```
 
+<br>
+
 #### Java attribute
 
 In our previous example, we created an object named `myCar` in our `Car1` class and had the main method print a variable - **Toyota**. That variable we printed was actually an attribute that we assigned to our object named `myCar.model`:
+
+<br>
 
 ```
 myCar.model = "Toyota";
 ```
 
+<br>
+
 What we have here is the object **myCar** with an assigned attribute named **model** which holds the **"Toyota"** variable. We can now expand our object with different attributes like **color**, **engine**, **year** etc.
+
+<br>
 
 ## Java Constructor
 
@@ -295,6 +430,7 @@ In Java, a **constructor** is a special type of method that is called when an ob
 
 Example with **Car1** `class` and `main` method, followed by the **Car1** `constructor`:
 
+<br>
 
 ```
 public class Car1 {
@@ -314,20 +450,30 @@ public class Car1 {
 }
 ```
 
+<br>
 
 **Definitions:**
 
-- **`public`**: This is the **access modifier**, indicating that the constructor can be accessed from outside the class.
+```
+public: This is the access modifier indicating that the constructor can be accessed from outside the class.
 
-- **`Car1`**: This is the **name of the constructor**, <u>which must match the class name!</u>
+Car1: This is the name of the constructor <u>which must match the class name!</u>
 
-- **`(String model)`**: These are the **parameters** of the constructor, allowing the model to be passed during object creation.
+(String model): These are the parameters of the constructor, allowing the model to be passed during object creation.
 
-- **`this.model = model;`**: This line initializes the object's model using the constructor's parameter.
+this.model = model;: This line initializes the object's model using the constructor's parameter.
+```
 
-**NOTE:** Constructors do not have a return type.
+<br>
+
+
+**NOTE:** Constructors do not have a return type!
+
+<br>
 
 Using a constructor, we now have a special type of method where we can set up our object's attributes:
+
+<br>
 
 ```
 public Car1(String model) {
@@ -335,16 +481,23 @@ public Car1(String model) {
     }
 ```   
 
+<br>
 
 We no longer need to hardcode the value of our attribute when defining it, but can reference it in the object itself:
+
+<br>
 
 ```
         Car1 myCar = new Car1("Toyota");
         System.out.println("Car model: " + myCar.model);
 ```
+<br>
 
+#### this keyword
 
-**`this` keyword**: In the context of what we know so far (i.e. classes, methods, objects, constructors), we will use the **`this`** keyword when defining attributes within constructors to later refer to the object's variables. Using `this` keyword would allow us also to avoid mistakes when calling out instance and local variables that share the same name. 
+In the context of what we know so far (i.e. classes, methods, objects, constructors), we will use the **`this`** keyword when defining attributes within constructors to later refer to the object's variables. Using `this` keyword would allow us to also avoid mistakes when calling out instance and local variables that share the same name. 
+
+<br>
 
 ```
 public class Car1 {
@@ -364,12 +517,15 @@ public class Car1 {
 }
 ```
 
+<br>
+
 example output:
 
 ```
 Car model: Honda
 ```
 
+<br>
 
 If `this.model = model;` is not defined then our expected output would be **null** because the instance variable (**private String model;**) by that same name holds no value.
 
