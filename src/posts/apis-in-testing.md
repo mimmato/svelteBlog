@@ -5,6 +5,7 @@ date: '2024-10-30'
 categories:
   - api
   - api testing
+  - REST
 published: true
 ---
 
@@ -24,7 +25,6 @@ published: true
      - [8. Documentation](#8-documentation)
 2. [Information API Creators Should Provide](#information-api-creators-should-provide)
 3. [APIs in Software Testing](#apis-in-software-testing)
-
 
 ### APIs
 

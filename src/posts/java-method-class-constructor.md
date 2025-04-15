@@ -1,6 +1,6 @@
 ---
-title: Java Method, Class & Constructor
-description: Java Method, Class & Constructor
+title: Java Method, Class and Constructor
+description: Java Method, Class and Constructor
 date: 2025-01-22
 categories:
   - java methods
@@ -77,7 +77,6 @@ The following image illustrates the anatomy of a Java Class and the contained Ja
 image source: 
 *Kathy Sierra and Bert Bates. 2005. Head First Java, 2nd Edition. O'Reilly & Associates, Inc., USA.*
 
-TEST 
 
 #### Main Method declaration, signature & syntax:
 
