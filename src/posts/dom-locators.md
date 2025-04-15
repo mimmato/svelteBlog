@@ -104,7 +104,7 @@ As there are not as many elements, in the above example, we can go about locatin
 
 The most obvious and straightforward way to locate a tag is using its name. So, if we are to locate the header tag, then we will simply type in `“h1”` in our browser inspect window. This would also be specified as `By.tagName("h1")` when typing our statement in Selenium:
 
-![Image](assets/img/byTagName.png)
+<!-- ![Image](assets/img/byTagName.png) -->
 
 Another way is to use XPath expressions:
 
