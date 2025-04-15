@@ -12,8 +12,8 @@ published: true
 ## Table of contents:
 
 - [Introduction](#introduction)
-- [List of Web Elements:](#list-of-web-elements:)
-    - [1. WebElement and WebElements](#1.-WebElement-and-WebElements)
+- [List of Web Elements](#list-of-web-elements)
+    - [WebElement and WebElements](#WebElement-and-WebElements)
     - [2. Checkboxes](#checkboxes)
     - [3. Radio Buttons](#radio-buttons)
     - [4. Select (dropdown)](#Select-(dropdown))
@@ -28,7 +28,7 @@ In this article, we will review Web Elements in the context of Selenium’s WebD
 
 You may also refer to the [“DOM and locators”](https://mimmato.github.io/posts/DOM-locators/) article for more information about the Document Object Model and locators for finding web elements.
 
-#### List of Web Elements:
+#### List of Web Elements
 
 ```
 1. WebElement and WebElements
@@ -44,15 +44,15 @@ You may also refer to the [“DOM and locators”](https://mimmato.github.io/pos
 
 ---
 
-#### 1. WebElement and WebElements
+#### WebElement and WebElements
 
-### What are WebElement and WebElements?
+#### What are WebElement and WebElements?
 
 A **WebElement** in Selenium represents an individual HTML element on a web page, allowing interaction such as clicking, sending input, and retrieving attributes.
 
 A **WebElements** list is a collection of multiple WebElements found on a webpage that match a specific locator strategy.
 
-### Locating a WebElement
+#### Locating a WebElement
 
 To locate a single WebElement, use `findElement()`:
 
@@ -62,7 +62,7 @@ To locate a single WebElement, use `findElement()`:
 WebElement element = webDriver.findElement(By.id("elementID"));
 ```
 
-### Locating Multiple WebElements
+#### Locating Multiple WebElements
 
 To locate multiple elements, use `findElements()`:
 
@@ -78,7 +78,7 @@ The difference between `findElement()` and `findElements()` is that `findElement
 
 ---
 
-## 2. Checkboxes
+#### 2. Checkboxes
 
 <br>
 
@@ -99,7 +99,7 @@ Checkboxes are a type of web element that can be interacted with. Typically, use
 </form>
 ```
 
-### Locating and Interacting with a Checkbox in Selenium
+#### Locating and Interacting with a Checkbox in Selenium
 
 To locate a single checkbox:
 
@@ -124,11 +124,11 @@ for (WebElement cb : checkboxes) {
 }
 ```
 
----
-
-## 3. Radio Buttons
+#### 3. Radio Buttons
 
 Radio buttons allow users to select only one option from a set. Below is an example:
+
+<br>
 
 ```
 <form>
@@ -137,16 +137,17 @@ Radio buttons allow users to select only one option from a set. Below is an exam
 </form>
 ```
 
-### Locating and Selecting a Radio Button in Selenium
+#### Locating and Selecting a Radio Button in Selenium
+
+<br>
 
 ```
 WebElement radioButton = webDriver.findElement(By.xpath("//input[@value='male']"));
 radioButton.click();
 ```
+<br>
 
----
-
-## 4. Select (Dropdown)
+#### 4. Select (Dropdown)
 
 Dropdowns allow users to select an option from a list. Selenium provides the `Select` class to interact with them.
 
@@ -159,34 +160,33 @@ Dropdowns allow users to select an option from a list. Selenium provides the `Se
 </select>
 ```
 
-### Selecting an Option in Selenium
+#### Selecting an Option in Selenium
+
+<br>
 
 ```
 Select dropdown = new Select(webDriver.findElement(By.id("dropdown")));
 dropdown.selectByValue("option1");
 ```
 
----
-
-## 5. Mouse Hover
+#### 5. Mouse Hover
 
 Mouse hover actions are performed using the `Actions` class in Selenium.
 
-### Example:
+#### Example:
 
 ```
 Actions actions = new Actions(webDriver);
 WebElement element = webDriver.findElement(By.id("hoverElement"));
 actions.moveToElement(element).perform();
 ```
+<br>
 
----
-
-## 6. Tables
+#### 6. Tables
 
 Tables contain structured data and are defined with the `<table>` tag in HTML.
 
-### Example:
+#### Example:
 
 
 ```
@@ -202,6 +202,8 @@ Tables contain structured data and are defined with the `<table>` tag in HTML.
 </table>
 ```
 
+<br>
+
 `<th>` - defines a table header cell
 
 <br>
@@ -212,7 +214,7 @@ Tables contain structured data and are defined with the `<table>` tag in HTML.
 
 `<td>` - defines a table data cell
 
-### Retrieving Table Data
+#### Retrieving Table Data
 
 ```
 List<WebElement> rows = webDriver.findElements(By.xpath("//table/tr"));
@@ -221,13 +223,13 @@ for (WebElement row : rows) {
 }
 ```
 
----
+<br>
 
-## 7. Alert Boxes
+#### 7. Alert Boxes
 
 Alerts are pop-up messages that require user interaction.
 
-### Handling Alerts in Selenium
+#### Handling Alerts in Selenium
 
 ```
 Alert alert = webDriver.switchTo().alert();
@@ -235,13 +237,13 @@ alert.accept(); // Clicks OK
 alert.dismiss(); // Clicks Cancel
 ```
 
----
+<br>
 
-## 8. Windows and Tabs
+#### 8. Windows and Tabs
 
 Selenium allows switching between multiple windows and tabs.
 
-### Handling Multiple Windows
+#### Handling Multiple Windows
 
 ```
 String mainWindow = webDriver.getWindowHandle();
@@ -252,5 +254,7 @@ for (String window : allWindows) {
     }
 }
 ```
+
 <br>
+
 This ensures seamless interaction with pop-up windows or new browser tabs.
