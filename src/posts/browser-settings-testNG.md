@@ -11,7 +11,7 @@ published: true
 
 # Table of Contents
 
-- [Introduction](#Introduction)
+- [Introduction](#introduction)
 - [Purpose of TestNG Annotations](#purpose-of-testng-annotations)  
 - [Common TestNG Annotations](#common-testng-annotations)  
 - [TestNG Annotation Hierarchy](#testng-annotation-hierarchy)
