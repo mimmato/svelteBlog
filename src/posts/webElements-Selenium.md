@@ -28,8 +28,9 @@ In this article, we will review Web Elements in the context of Selenium’s WebD
 
 You may also refer to the [“DOM and locators”](https://mimmato.github.io/posts/DOM-locators/) article for more information about the Document Object Model and locators for finding web elements.
 
-### List of Web Elements:
+#### List of Web Elements:
 
+```
 1. WebElement and WebElements
 2. Checkboxes
 3. Radio Buttons
@@ -39,10 +40,11 @@ You may also refer to the [“DOM and locators”](https://mimmato.github.io/pos
 7. Alert Boxes
 8. Windows and Tabs
 9. iFrames
+```
 
 ---
 
-## 1. WebElement and WebElements
+#### 1. WebElement and WebElements
 
 ### What are WebElement and WebElements?
 
