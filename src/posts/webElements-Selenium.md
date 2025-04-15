@@ -43,6 +43,8 @@ A **WebElements** list is a collection of multiple WebElements found on a webpag
 
 To locate a single WebElement, use `findElement()`:
 
+<br>
+
 ```
 WebElement element = webDriver.findElement(By.id("elementID"));
 ```
@@ -51,9 +53,13 @@ WebElement element = webDriver.findElement(By.id("elementID"));
 
 To locate multiple elements, use `findElements()`:
 
+<br>
+
 ```
 List<WebElement> elements = webDriver.findElements(By.className("elementsClass"));
 ```
+
+<br>
 
 The difference between `findElement()` and `findElements()` is that `findElement()` returns a single WebElement, while `findElements()` returns a list of matching elements or an empty list if no elements are found.
 
@@ -61,7 +67,11 @@ The difference between `findElement()` and `findElements()` is that `findElement
 
 ## 2. Checkboxes
 
+<br>
+
 Checkboxes are a type of web element that can be interacted with. Typically, users can select one or multiple checkboxes, which can either be checked or unchecked. Below is an example of an HTML block containing multiple checkboxes:
+
+<br>
 
 ```
 <form>
@@ -80,13 +90,19 @@ Checkboxes are a type of web element that can be interacted with. Typically, use
 
 To locate a single checkbox:
 
+<br>
+
 ```
 WebElement checkbox = webDriver.findElement(By.xpath("//*[@id='option1']"));
 checkbox.click();
 boolean isChecked = checkbox.isSelected();
 ```
 
+<br>
+
 To locate multiple checkboxes:
+
+<br>
 
 ```
 List<WebElement> checkboxes = webDriver.findElements(By.xpath("//input[@type='checkbox']"));
@@ -121,6 +137,8 @@ radioButton.click();
 
 Dropdowns allow users to select an option from a list. Selenium provides the `Select` class to interact with them.
 
+<br>
+
 ```
 <select id="dropdown">
     <option value="option1">Option 1</option>
@@ -153,9 +171,10 @@ actions.moveToElement(element).perform();
 
 ## 6. Tables
 
-Tables contain structured data and are defined with `<table>` in HTML.
+Tables contain structured data and are defined with the `<table>` tag in HTML.
 
 ### Example:
+
 
 ```
 <table>
@@ -169,6 +188,16 @@ Tables contain structured data and are defined with `<table>` in HTML.
     </tr>
 </table>
 ```
+
+`<th>` - defines a table header cell
+
+<br>
+
+`<tr>` - defines a table row
+
+<br>
+
+`<td>` - defines a table data cell
 
 ### Retrieving Table Data
 
