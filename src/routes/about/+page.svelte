@@ -48,6 +48,7 @@
 <div class="projects-section">
   <h2>Projects I'm working on</h2>
   <ul>
+
     <li>
       <strong>Frontend test automation</strong> with Java, Selenium, POM and Page Factory:
       <br />
@@ -56,6 +57,7 @@
         Skillo training website
       </a>
     </li>
+
     <li>
       <strong>Java scraper for events in Bulgaria</strong> based on ticket sources:
       <br />
@@ -64,6 +66,16 @@
         eventsGather
       </a>
     </li>
+
+    <li>
+      <strong>GitHub REST API</strong> tests with Postman:
+      <br />
+      <br>
+      <a href="https://github.com/mimmato/eventsGather" target="_blank">
+        GitHub REST API tests
+      </a>
+    </li>
+
   </ul>
 </div>
 

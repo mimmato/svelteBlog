@@ -1,6 +1,6 @@
 ---
 title: DOM and locators
-description: DOM and locators
+description: document object model and strategies for locating web elements
 date: 2025-02-28
 categories:
   - web elements

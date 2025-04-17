@@ -1,7 +1,7 @@
 <!-- src/lib/components/TableOfContents.svelte -->
 <script lang="ts">
     export let headings: { id: string; text: string; level: number }[] = [];
-</script>
+  </script>
   
   <nav class="toc">
     <ul>

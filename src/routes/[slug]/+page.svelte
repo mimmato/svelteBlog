@@ -16,7 +16,7 @@
 
 
 	import { formatDate } from '$lib/utils'
-	import TableOfContents from '$lib/components/TableOfContents.svelte'
+	// import TableOfContents from '$lib/components/TableOfContents.svelte'
 
 	let { data } = $props()
 	let headings = []
@@ -39,7 +39,7 @@
 </svelte:head>
 
 <div class="layout">
-	<TableOfContents {headings} />
+	<!-- <TableOfContents {headings} /> -->
 
 	<article>
 		<hgroup>

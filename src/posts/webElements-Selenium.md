@@ -1,6 +1,6 @@
 ---
 title: WebElements in Selenium
-description: WebElements in Selenium
+description: working with web elements using Selenium
 date: 2025-03-01
 categories:
   - web elements
@@ -9,24 +9,27 @@ categories:
 published: true
 ---
 
-## Table of contents:
+    ## Table of contents:
 
-- [Introduction](#introduction)
-- [List of Web Elements](#list-of-web-elements)
-    - [WebElement and WebElements](#WebElement-and-WebElements)
-    - [2. Checkboxes](#checkboxes)
-    - [3. Radio Buttons](#radio-buttons)
-    - [4. Select (dropdown)](#Select-(dropdown))
+    - [Introduction](#introduction)
+    - [List of Web Elements](#list-of-web-elements)
+        - [WebElement and WebElements](#webelement-and-webelements)
+        - [Checkboxes](#checkboxes)
+        - [Radio Buttons](#radio-buttons)
+        - [Select (dropdown)](#Select-(dropdown))
+        - [Mouse Hover](#mouse-hover)
+        - [Tables](#tables)
+        - [Alert Boxes](#alert-boxes)
+        - [Windows and Tabs](#windows-and-tabs)
+        - [iFrames](#iframes)
 
-
-
-## Web Elements in Selenium
+#### Web Elements in Selenium
 
 ### Introduction
 
 In this article, we will review Web Elements in the context of Selenium’s WebDriver and as part of the DOM structure. We will go over the following list of web elements and review their limitations, rules, necessary methods, and other considerations when interacting with them.
 
-You may also refer to the [“DOM and locators”](https://mimmato.github.io/posts/DOM-locators/) article for more information about the Document Object Model and locators for finding web elements.
+You may also refer to the [“DOM and locators”](https://mimmato.vercel.app/dom-locators) article for more information about the Document Object Model and locators for finding web elements.
 
 #### List of Web Elements
 
@@ -41,8 +44,6 @@ You may also refer to the [“DOM and locators”](https://mimmato.github.io/pos
 8. Windows and Tabs
 9. iFrames
 ```
-
----
 
 #### WebElement and WebElements
 
@@ -78,7 +79,7 @@ The difference between `findElement()` and `findElements()` is that `findElement
 
 ---
 
-#### 2. Checkboxes
+#### Checkboxes
 
 <br>
 
@@ -124,7 +125,7 @@ for (WebElement cb : checkboxes) {
 }
 ```
 
-#### 3. Radio Buttons
+#### Radio Buttons
 
 Radio buttons allow users to select only one option from a set. Below is an example:
 
@@ -147,7 +148,7 @@ radioButton.click();
 ```
 <br>
 
-#### 4. Select (Dropdown)
+#### Select (Dropdown)
 
 Dropdowns allow users to select an option from a list. Selenium provides the `Select` class to interact with them.
 
@@ -169,7 +170,7 @@ Select dropdown = new Select(webDriver.findElement(By.id("dropdown")));
 dropdown.selectByValue("option1");
 ```
 
-#### 5. Mouse Hover
+#### Mouse Hover
 
 Mouse hover actions are performed using the `Actions` class in Selenium.
 
@@ -182,7 +183,7 @@ actions.moveToElement(element).perform();
 ```
 <br>
 
-#### 6. Tables
+#### Tables
 
 Tables contain structured data and are defined with the `<table>` tag in HTML.
 
@@ -225,7 +226,7 @@ for (WebElement row : rows) {
 
 <br>
 
-#### 7. Alert Boxes
+#### Alert Boxes
 
 Alerts are pop-up messages that require user interaction.
 
@@ -239,7 +240,7 @@ alert.dismiss(); // Clicks Cancel
 
 <br>
 
-#### 8. Windows and Tabs
+#### Windows and Tabs
 
 Selenium allows switching between multiple windows and tabs.
 
@@ -258,3 +259,21 @@ for (String window : allWindows) {
 <br>
 
 This ensures seamless interaction with pop-up windows or new browser tabs.
+
+#### iFrames
+
+iFrames (Inline Frames) are used to embed another HTML document within the current page. They are commonly used for embedding videos, advertisements, or other content from external sources. 
+
+To interact with elements inside an iFrame, you must first switch the WebDriver’s context to the frame.
+
+<br>
+
+#### Switching to an iFrame in Selenium
+
+```
+webDriver.switchTo().frame("frameNameOrId"); // Perform actions inside the iframe 
+
+
+webDriver.switchTo().defaultContent(); // Switch back to the main page
+
+```

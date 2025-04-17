@@ -1,6 +1,6 @@
 ---
-title: Introduction to Object Oriented Programming, Inheritance and Polymorphism
-description: Java Method, Class and Constructor
+title: Introduction to Object Oriented Programming; Inheritance and Polymorphism
+description: OOP principles(Inheritance and Polymorphism)
 date: 2025-01-29
 categories:
   - oop
