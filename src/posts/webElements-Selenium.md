@@ -1,5 +1,5 @@
 ---
-title: WebElements in Selenium
+title: Working with WebElements in Selenium
 description: working with web elements using Selenium
 date: 2025-03-01
 categories:
@@ -22,8 +22,6 @@ published: true
         - [Alert Boxes](#alert-boxes)
         - [Windows and Tabs](#windows-and-tabs)
         - [iFrames](#iframes)
-
-#### Web Elements in Selenium
 
 ### Introduction
 
