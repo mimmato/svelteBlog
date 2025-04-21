@@ -22,10 +22,6 @@ published: true
    - [Helper Methods](#helper-methods)
 - [Summary](#summary)
 
-Summary
-
-Notes on WebDriver Initialization Strategy
-
 #### Introduction
 
 The idea of this article is to introduce the reader to a practice of separating the TestNG framework annotations (excluding @Test) in a separate file when applying Page Object Model patterns while designing applications. 
@@ -34,7 +30,7 @@ Please refer to the [Page Object Model] article if you have not read it already.
 
 To recap, the Page Object Model or POM for short, allows us to separate page elements from test scripts, thus allowing us to focus on the test cases. It makes test suites much easier to maintain and oraganize. 
 
-<br/><br/>
+<br>
 
 #### Purpose of TestNG Annotations
 
