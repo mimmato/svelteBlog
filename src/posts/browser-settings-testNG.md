@@ -201,6 +201,7 @@ protected void tearDownMethod(ITestResult testResult) {
     quitDriver();
 }
 ```
+
 <br/>
 
 At this stage:
@@ -222,6 +223,8 @@ makeScreenshotDIR(), deleteScreenshots(), takeScreenshotOnFailure()
 <br>
 
 We have three important helper methods supporting our @BeforeSuite, @BeforeMethod, and @AfterMethod flows:
+
+<br>
 
 >makeScreenshotDIR() — creates the screenshots directory if it does not exist.
 
@@ -268,8 +271,8 @@ Some teams prefer to initialize and quit the WebDriver at the class or suite lev
 
 In our example, by setting up the WebDriver inside @BeforeMethod, we ensure that each test method starts with a fresh browser instance, reducing the chance of one test affecting another. Moreover, our [testng.xml](https://raw.githubusercontent.com/mimmato/SK17-Automation-Final/refs/heads/master/testng.xml) file is set to execute the test suite in parallel and based on the specified class files. This means that each class is treated as an independent unit, and its corresponding @BeforeMethod and @AfterMethod setups are executed separately for each test method inside that class. Running tests in parallel at the class level combined with per-method WebDriver initialization gives us a good balance between:
 
+<br>
+
 >Test isolation — Each test method has its own browser session.
 
 >Parallelism — Multiple classes can be executed at the same time, reducing overall test execution time.
-
-
