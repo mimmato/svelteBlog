@@ -27,19 +27,33 @@
     </div>
   </div>
 
-  <!-- Right: Tech Stack -->
-  <div class="right-side">
-    <p><strong>Tech stack:</strong></p>
-    <div class="tech-icons">
+<!-- Right: Tech Stack -->
+<div class="right-side">
+  <p><strong>Tech stack:</strong></p>
+  <div class="tech-icons">
+    <a href="https://en.wikipedia.org/wiki/Java_(programming_language)" target="_blank" rel="noopener noreferrer">
       <Icon icon="logos:java" title="Java" />
+    </a>
+    <a href="https://en.wikipedia.org/wiki/Selenium_(software)" target="_blank" rel="noopener noreferrer">
       <Icon icon="logos:selenium" title="Selenium" />
+    </a>
+    <a href="https://en.wikipedia.org/wiki/Postman_(software)" target="_blank" rel="noopener noreferrer">
       <Icon icon="logos:postman-icon" title="Postman" />
+    </a>
+    <a href="https://en.wikipedia.org/wiki/Git" target="_blank" rel="noopener noreferrer">
       <Icon icon="logos:git-icon" title="Git" />
+    </a>
+    <a href="https://en.wikipedia.org/wiki/GitHub" target="_blank" rel="noopener noreferrer">
       <Icon icon="simple-icons:github" title="GitHub" />
+    </a>
+    <a href="https://en.wikipedia.org/wiki/MySQL" target="_blank" rel="noopener noreferrer">
       <Icon icon="logos:mysql-icon" title="MySQL" />
+    </a>
+    <a href="https://en.wikipedia.org/wiki/Jira_(software)" target="_blank" rel="noopener noreferrer">
       <Icon icon="logos:jira" title="Jira" />
-    </div>
+    </a>
   </div>
+</div>
 </div>
 
 <hr class="section-separator" />
@@ -48,36 +62,29 @@
 <div class="projects-section">
   <h2>Projects I'm working on</h2>
   <ul>
-
-    <li>
-      <strong>Frontend test automation</strong> with Java, Selenium, POM and Page Factory:
-      <br />
-      <br>
+    <li class="project-item">
+      <p><strong>Frontend test automation</strong> with Java, Selenium, POM and Page Factory:</p>
       <a href="https://github.com/mimmato/SK17-Automation-Final" target="_blank">
         Skillo training website
       </a>
     </li>
 
-    <li>
-      <strong>Java scraper for events in Bulgaria</strong> based on ticket sources:
-      <br />
-      <br>
+    <li class="project-item">
+      <p><strong>Java scraper for events in Bulgaria</strong> based on ticket sources:</p>
       <a href="https://github.com/mimmato/eventsGather" target="_blank">
         eventsGather
       </a>
     </li>
 
-    <li>
-      <strong>GitHub REST API</strong> tests with Postman:
-      <br />
-      <br>
+    <li class="project-item">
+      <p><strong>GitHub REST API</strong> tests with Postman:</p>
       <a href="https://github.com/mimmato/eventsGather" target="_blank">
         GitHub REST API tests
       </a>
     </li>
-
   </ul>
 </div>
+
 
 <style>
   h1 {
@@ -189,6 +196,19 @@
   .projects-section a:hover {
     text-decoration: underline;
   }
+
+  .projects-section li p {
+  margin-bottom: 0.5rem;
+}
+
+.project-item {
+  margin-bottom: 2rem;
+}
+
+.project-item p {
+  margin-bottom: 0.5rem;
+}
+
 
   @media (max-width: 800px) {
     .top-container {
