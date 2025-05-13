@@ -78,7 +78,7 @@
 
     <li class="project-item">
       <p><strong>GitHub REST API</strong> tests with Postman:</p>
-      <a href="https://github.com/mimmato/eventsGather" target="_blank">
+      <a href="https://elements.getpostman.com/redirect?entityId=34236881-72f79f5c-4de9-4699-b159-23d0a2b4fb30&entityType=collection" target="_blank">
         GitHub REST API tests
       </a>
     </li>
