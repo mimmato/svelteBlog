@@ -19,6 +19,7 @@ published: true
    - [Issue Management](#-issue-management)  
    - [Pull Request Workflow](#-pull-request-workflow)
 3. [Tests](#3-tests-coverage)
+4. [Try it yourself](#4-try-it-yourself)
 
 
 ## 1. Introduction
@@ -80,14 +81,13 @@ This folder simulates a full pull request flow, including branch creation, file 
 | PUT    | `/repos/{owner}/{repo}/pulls/{pull_number}/merge`            | Merge the pull request               |
 | GET    | `/repos/{owner}/{repo}/commits`                              | Confirm the merge via latest commit  |
 
----
+<br>
 
 Each use case is designed with reusability and automation in mind, leveraging:
 
 - **Postman environments**  
 - **Dynamic collection variables**  
 - **Built-in test scripts** for reliable validation
-
 
 ## 3. Tests coverage
 
@@ -96,16 +96,25 @@ Each request in the collection includes test scripts to verify expected behavior
 <br>
 
 - **Repository Existence Check**
+
+<br>
+
    > Verifies if the repository exists by asserting response status (`200 OK` or `404 Not Found`).
 
    > Stores the result in a collection variable: `repo_exists`.
 
 - **Repository Deletion**
+
+<br>
+
    > Confirms deletion with `204 No Content`, or notes if the repository was already absent (`404 Not Found`).
 
    > Handles and logs unexpected responses.
 
 - **Repository Creation**
+
+<br>
+
    > Validates success with `201 Created`.
 
    > Ensures `full_name` is present in the response.
@@ -113,6 +122,9 @@ Each request in the collection includes test scripts to verify expected behavior
    > Saves `repo_full_name` for use in later requests.
 
 - **Admin Collaborator Verification**
+
+<br>
+
    > Filters collaborators for those with `admin` permissions.
 
    > Stores a comma-separated list of admin usernames in an environment variable.
@@ -120,6 +132,9 @@ Each request in the collection includes test scripts to verify expected behavior
    > Asserts that at least one admin user exists.
 
 - **Repository Info Retrieval**
+
+<br>
+
    > Confirms success with `200 OK`.
 
    > Logs the current repository description.
@@ -127,6 +142,9 @@ Each request in the collection includes test scripts to verify expected behavior
    > Saves the description to a collection variable (`previous_description`) for later comparison.
 
 - **Repository Update (PATCH)**
+
+<br>
+
    > Verifies update with `200 OK`.
 
    > Confirms that the repository description has changed compared to its previous value.
@@ -139,4 +157,39 @@ These tests provide dynamic, state-aware execution throughout the workflow and e
 
 <br>
 
+## 4. Try it yourself
+
+<br>
+
 You can access and import the full collection of tests [here](https://elements.getpostman.com/redirect?entityId=34236881-72f79f5c-4de9-4699-b159-23d0a2b4fb30&entityType=collection).
+
+<br>
+
+You will be redirected to my public collection of tests. You can run tests in browser or using the Postman Desktop application. To run tests, you must:
+
+#### Add your own GitHub Personal Access Token:
+
+<br>
+
+[Managing your personal access tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
+
+<br>
+
+#### Assign neccessary permissions:
+
+<br>
+
+- repo
+- worklow
+- write:packages
+- admin:public_key
+- admin:repo_hook
+- delete_repo
+
+<br>
+
+#### Configure it as a vault key in the Postman vault:
+
+<br>
+
+[Store secrets in your Postman Vault](https://learning.postman.com/docs/sending-requests/postman-vault/postman-vault-secrets/#access-your-postman-vault)
